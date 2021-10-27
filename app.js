@@ -38,28 +38,6 @@ const feature = [
 ];
 const shop = [{}];
 
-var removeItem = document.getElementsByClassName("btn-remove");
-for (var i = 0; i < removeItem.length; i++) {
-  var button = removeItem[i];
-  button.addEventListener("click", removeCartItem);
-}
-
-var quantityInputs = document.getElementsByClassName("cart-quantity-input");
-for (var i = 0; i < quantityInputs.length; i++) {
-  var input = quantityInputs[i];
-  input.addEventListener("click", quantityChanges);
-}
-
-//purchase function
-function purchase() {
-  alert("Thanks for shopping with us");
-  var cartItems = document.getElementsByClassName("cart-items")[0];
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
-  }
-  updateCartTotal();
-}
-//document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchase)
 
 //function to display featured products to the screen
 const container = document.querySelectorAll(".shop-container");
@@ -79,6 +57,19 @@ function featuredProduct(Items) {
   displayProducts = displayProducts.join("");
   container.innerHTML = displayMenu;
   console.log(displayProducts);
+}
+
+
+//
+const purchase = document.getElementsByClassName("purchase")[0]
+//purchase.addEventListener('click', function(){
+    try{
+    const cartItems = document.querySelectorAll("cart-items")
+    while (cart.hasChildNodes()){
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    alert("Thanks for shopping with us")
+} catch(err){
 }
 
 //removing items added to the cart
@@ -131,7 +122,6 @@ for (var i = 0; i < addbtn.length; i++) {
     alert("added to cart");
     addToStorage(product);
     displayCart();
-    subtotal();
   });
 }
 
@@ -205,19 +195,19 @@ function displayCart() {
                         <span class="cart-item-title">${item.title}</span>
                     </div>
                     <div class="cart-price cart-column">$${item.price} </div>
-                    <div class="cart-column">$${
-                      item.price * item.quantity
-                    } </div>
+                   
                     <div class="cart-qty cart-column">
                         <input class="cart-quantity-input" type="number" value="${
                           item.quantity
                         }" onchange="quantityIncrease(${index}, this.value)">
-                        <button onclick="quantityIncrease(${index}, ${
-        item.quantity + 1
-      })">+</button>
-                        <button onclick="quantityIncrease(${index}, ${
-        item.quantity - 1
-      })">-</button>
+                    </div>
+                        
+
+                    <div class="cart-sub cart-column">$${
+                      item.price * item.quantity
+                    } </div>
+
+                    <div>
                         <button class="btn-remove" type="button" onclick="removeCartItem(${index})">remove</button>
                     </div>
                 </div>

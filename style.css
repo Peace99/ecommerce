@@ -422,13 +422,17 @@ header {
 }
 
 .cart-price {
-	width: 20%;
+	width: 10%;
 	font-size: 1.2em;
 	color: var(--text-color)
 }
 
 .cart-quantity {
-	width: 35%;
+	width: 10%;
+}
+
+.cart-sub{
+	width: 10%;
 }
 
 .cart-item-title {
@@ -497,3 +501,9 @@ header {
 	cursor: pointer;
 }
 
+.btn-remove {
+	background-color: #83b735;
+	color: var(--text-solor);
+	cursor: pointer;
+	display: flex;
+}
