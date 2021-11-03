@@ -346,15 +346,15 @@ header {
 		display: initial;
 	}
 	header .navbar{
-		position: absolute;
-		top: 50px;
-		left: 0;
-		right: 0;
-		display: flex;
+		position: fixed;
+		top: 5rem;
+		left: -100%;
+		width: 100%;
 		flex-direction: column;
 		background: #fff;
 		box-shadow: 0 4px 4px rgb(0 0 0/10%);
-		transition: 0.2s ease;
+		border-radius: 10px;
+		transition: 0.3s;
 		text-align: center;
 
 	}
@@ -363,7 +363,7 @@ header {
 		display: block;
 	}
 	.navbar.active{
-		top: 100%;
+		left: 0;
 	}
 	.navbar a:hover{
 		color: #fff;
