@@ -1,13 +1,23 @@
-let menu = document.querySelector("#menu-icon");
+let menu = document.getElementById("menu-icon");
 let navbar = document.querySelector(".navbar");
 
 menu.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-window.onscroll = () => {
-  navbar.classList.remove("active");
-};
+// window.onscroll = () => {
+//   navbar.classList.remove("active");
+// };
+
+function myfunction() {
+  // body...
+  if (menu.style.display === "block"){
+    menu.style.display = "none"
+  }
+  else {
+    menu.style.display = "block"
+  }
+}
 
 const feature = [
   {
@@ -208,7 +218,7 @@ function displayCart() {
                     } </div>
 
                     <div>
-                        <button class="btn-remove" type="button" onclick="removeCartItem(${index})">remove</button>
+                        <button class="cart-action cart-column" type="button" onclick="removeCartItem(${index})">remove</button>
                     </div>
                 </div>
                 `;

@@ -347,7 +347,7 @@ header {
 	}
 	header .navbar{
 		position: absolute;
-		top: -500px;
+		top: 50px;
 		left: 0;
 		right: 0;
 		display: flex;
@@ -422,17 +422,21 @@ header {
 }
 
 .cart-price {
-	width: 10%;
+	width: 15%;
 	font-size: 1.2em;
 	color: var(--text-color)
 }
 
 .cart-quantity {
-	width: 10%;
+	width: 15%;
 }
 
 .cart-sub{
-	width: 10%;
+	width: 15%;
+}
+
+.cart-action {
+	width: 15%;
 }
 
 .cart-item-title {
@@ -506,4 +510,26 @@ header {
 	color: var(--text-solor);
 	cursor: pointer;
 	display: flex;
+}
+
+@media(max-width: 491px)
+{
+	.cart-header {
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--text-color);
+}
+
+.cart-column{
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--main-color);
+	margin-right: 1.5em;
+	padding-bottom: 8px;
+	margin-top: 8px;
+}
+
+.cart-row{
+	display: flex;
+}
 }
