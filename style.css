@@ -532,6 +532,41 @@ header {
 	display: flex;
 }
 .cart-item {
-	width: 15%;
+	width: 25%;
 }
+
+.cart-item-title {
+	color: var(--text-solor);
+	margin-left: .5em;
+	font-size: 0.5em;
+}
+
+.cart-item-image {
+	width: 45px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.cart-price {
+	width: 8%;
+	font-size: 0.6em;
+	color: var(--text-color)
+}
+
+.cart-quantity-input {
+	height: 24px;
+	width: 30px;
+	border-radius: 5px;
+	border: 1px solid #83b735;
+	background-color: black;
+	color: var(--main-color);
+	padding: 0;
+	text-align: center;
+	font-size: 1.2em;
+	margin-right: 25px;
+}
+.cart-action {
+	width: 10%;
+}
+
 }
