@@ -71,16 +71,14 @@ function featuredProduct(Items) {
 
 
 //
-const purchase = document.getElementsByClassName("purchase")[0]
-//purchase.addEventListener('click', function(){
-    try{
+const purchase = document.querySelector(".btn-purchase")
+purchase.addEventListener('click', function(){
     const cartItems = document.querySelectorAll("cart-items")
-    while (cart.hasChildNodes()){
+    while (cartItems.hasChildNodes()){
         cartItems.removeChild(cartItems.firstChild)
     }
     alert("Thanks for shopping with us")
-} catch(err){
-}
+})
 
 //removing items added to the cart
 function removeCartItem(id) {

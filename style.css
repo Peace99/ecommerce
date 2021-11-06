@@ -531,4 +531,7 @@ header {
 .cart-row{
 	display: flex;
 }
+.cart-item {
+	width: 15%;
+}
 }
